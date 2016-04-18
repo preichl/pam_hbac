@@ -485,7 +485,7 @@ class PamHbacTestDirect(PamHbacTestCase):
         log in the host referenced in the rule using the service referenced
         in the rule
         """
-        self.assertDenied("admin", self.rule_svc.name, self.client.name)
+        self.assertAllowed("admin", self.rule_svc.name, self.client.name)
 
     def test_deny_non_rule_svc(self):
         """
